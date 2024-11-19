@@ -1,0 +1,258 @@
+[0.009s] Invoking command in '/home/inteli/modulo8-p1/build/cg_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake /home/inteli/modulo8-p1/cg/cg_interfaces -DCMAKE_INSTALL_PREFIX=/home/inteli/modulo8-p1/install/cg_interfaces
+[0.344s] -- The C compiler identification is GNU 11.4.0
+[0.877s] -- The CXX compiler identification is GNU 11.4.0
+[0.882s] -- Detecting C compiler ABI info
+[1.035s] -- Detecting C compiler ABI info - done
+[1.040s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.040s] -- Detecting C compile features
+[1.041s] -- Detecting C compile features - done
+[1.043s] -- Detecting CXX compiler ABI info
+[1.226s] -- Detecting CXX compiler ABI info - done
+[1.234s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.234s] -- Detecting CXX compile features
+[1.234s] -- Detecting CXX compile features - done
+[1.237s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.347s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.410s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.412s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.416s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.446s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.659s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.820s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.041s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.062s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.063s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.086s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.086s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.086s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.086s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.111s] -- Found PythonExtra: .so  
+[2.146s] -- Configuring done
+[2.170s] -- Generating done
+[2.172s] -- Build files have been written to: /home/inteli/modulo8-p1/build/cg_interfaces
+[2.182s] Invoked command in '/home/inteli/modulo8-p1/build/cg_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake /home/inteli/modulo8-p1/cg/cg_interfaces -DCMAKE_INSTALL_PREFIX=/home/inteli/modulo8-p1/install/cg_interfaces
+[2.184s] Invoking command in '/home/inteli/modulo8-p1/build/cg_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake --build /home/inteli/modulo8-p1/build/cg_interfaces -- -j8 -l8
+[2.226s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.237s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.247s] [  5%] Built target ament_cmake_python_copy_cg_interfaces
+[2.464s] running egg_info
+[2.465s] creating cg_interfaces.egg-info
+[2.465s] writing cg_interfaces.egg-info/PKG-INFO
+[2.465s] writing dependency_links to cg_interfaces.egg-info/dependency_links.txt
+[2.465s] writing top-level names to cg_interfaces.egg-info/top_level.txt
+[2.466s] writing manifest file 'cg_interfaces.egg-info/SOURCES.txt'
+[2.468s] reading manifest file 'cg_interfaces.egg-info/SOURCES.txt'
+[2.468s] writing manifest file 'cg_interfaces.egg-info/SOURCES.txt'
+[2.491s] [  5%] Built target ament_cmake_python_build_cg_interfaces_egg
+[2.563s] [  5%] Built target cg_interfaces__cpp
+[2.569s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.569s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.573s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.586s] [ 15%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cg_interfaces/srv/detail/move_cmd__functions.c.o[0m
+[2.589s] [ 17%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cg_interfaces/srv/detail/get_map__functions.c.o[0m
+[2.670s] [ 20%] [32m[1mLinking C shared library libcg_interfaces__rosidl_generator_c.so[0m
+[2.719s] [ 20%] Built target cg_interfaces__rosidl_generator_c
+[2.729s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.731s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.731s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.886s] [ 33%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cg_interfaces/srv/detail/move_cmd__type_support.cpp.o[0m
+[2.886s] [ 33%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cg_interfaces/srv/detail/get_map__type_support.cpp.o[0m
+[2.905s] [ 35%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cg_interfaces/srv/move_cmd__type_support.cpp.o[0m
+[2.906s] [ 38%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cg_interfaces/srv/get_map__type_support.cpp.o[0m
+[3.049s] [ 41%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cg_interfaces/srv/detail/dds_fastrtps/move_cmd__type_support.cpp.o[0m
+[3.110s] [ 43%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cg_interfaces/srv/move_cmd__type_support.cpp.o[0m
+[3.161s] [ 46%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cg_interfaces/srv/get_map__type_support.cpp.o[0m
+[3.212s] [ 48%] [32m[1mLinking CXX shared library libcg_interfaces__rosidl_typesupport_c.so[0m
+[3.287s] [ 51%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cg_interfaces/srv/detail/dds_fastrtps/get_map__type_support.cpp.o[0m
+[3.296s] [ 53%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cg_interfaces/srv/detail/move_cmd__type_support.c.o[0m
+[3.301s] [ 53%] Built target cg_interfaces__rosidl_typesupport_c
+[3.316s] [ 56%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cg_interfaces/srv/detail/get_map__type_support.c.o[0m
+[3.322s] [ 58%] [32m[1mLinking CXX shared library libcg_interfaces__rosidl_typesupport_cpp.so[0m
+[3.341s] [ 61%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cg_interfaces/srv/detail/move_cmd__type_support_c.cpp.o[0m
+[3.373s] [ 64%] [32mBuilding CXX object CMakeFiles/cg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cg_interfaces/srv/detail/get_map__type_support_c.cpp.o[0m
+[3.380s] [ 66%] [32m[1mLinking C shared library libcg_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.402s] [ 66%] Built target cg_interfaces__rosidl_typesupport_cpp
+[3.433s] [ 66%] Built target cg_interfaces__rosidl_typesupport_introspection_c
+[3.507s] [ 69%] [32m[1mLinking CXX shared library libcg_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.602s] [ 69%] Built target cg_interfaces__rosidl_typesupport_introspection_cpp
+[3.735s] [ 71%] [32m[1mLinking CXX shared library libcg_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.788s] [ 74%] [32m[1mLinking CXX shared library libcg_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.813s] [ 74%] Built target cg_interfaces__rosidl_typesupport_fastrtps_c
+[3.861s] [ 74%] Built target cg_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.877s] [ 74%] Built target cg_interfaces
+[3.895s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.319s] [ 76%] Built target cg_interfaces__py
+[4.336s] [ 82%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cg_interfaces/srv/_move_cmd_s.c.o[0m
+[4.336s] [ 82%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cg_interfaces/srv/_get_map_s.c.o[0m
+[4.431s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/cg_interfaces/libcg_interfaces__rosidl_generator_py.so[0m
+[4.477s] [ 84%] Built target cg_interfaces__rosidl_generator_py
+[4.495s] [ 92%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.495s] [ 92%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.495s] [ 92%] [32mBuilding C object CMakeFiles/cg_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.578s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/cg_interfaces/cg_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.582s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/cg_interfaces/cg_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.584s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cg_interfaces/cg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.615s] [100%] Built target cg_interfaces__rosidl_typesupport_c__pyext
+[4.617s] [100%] Built target cg_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.617s] [100%] Built target cg_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.628s] Invoked command in '/home/inteli/modulo8-p1/build/cg_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake --build /home/inteli/modulo8-p1/build/cg_interfaces -- -j8 -l8
+[4.692s] Invoking command in '/home/inteli/modulo8-p1/build/cg_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake --install /home/inteli/modulo8-p1/build/cg_interfaces
+[4.698s] -- Install configuration: ""
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/ament_index/resource_index/rosidl_interfaces/cg_interfaces
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/get_map.h
+[4.698s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/move_cmd.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__type_support.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__type_support.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__struct.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__functions.c
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__functions.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__functions.c
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__functions.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__struct.h
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/library_path.sh
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/library_path.dsv
+[4.699s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_generator_c.so
+[4.699s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_generator_c.so" to ""
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__rosidl_typesupport_fastrtps_c.h
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__rosidl_typesupport_fastrtps_c.h
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.700s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.700s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__type_support.c
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__rosidl_typesupport_introspection_c.h
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__type_support.c
+[4.700s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__rosidl_typesupport_introspection_c.h
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_introspection_c.so
+[4.701s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_c.so
+[4.701s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_c.so" to ""
+[4.701s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.701s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/get_map.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/move_cmd.hpp
+[4.701s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__struct.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__struct.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__builder.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__traits.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__traits.hpp
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__builder.hpp
+[4.701s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.701s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg
+[4.701s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.702s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.702s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__rosidl_typesupport_fastrtps_cpp.hpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/dds_fastrtps
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.702s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.702s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces
+[4.702s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv
+[4.702s] -- Up-to-date: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__rosidl_typesupport_introspection_cpp.hpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/get_map__type_support.cpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__type_support.cpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/include/cg_interfaces/cg_interfaces/srv/detail/move_cmd__rosidl_typesupport_introspection_cpp.hpp
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.702s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.702s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_cpp.so
+[4.703s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/pythonpath.sh
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/pythonpath.dsv
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces-0.0.0-py3.10.egg-info
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/_cg_interfaces_s.ep.rosidl_typesupport_c.c
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.703s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/libcg_interfaces__rosidl_generator_py.so
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/__init__.py
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_get_map.py
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_move_cmd_s.c
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_move_cmd.py
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/__init__.py
+[4.704s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_get_map_s.c
+[4.731s] Listing '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces'...
+[4.731s] Compiling '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/__init__.py'...
+[4.731s] Listing '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv'...
+[4.731s] Compiling '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/__init__.py'...
+[4.732s] Compiling '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_get_map.py'...
+[4.732s] Compiling '/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/srv/_move_cmd.py'...
+[4.735s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.735s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.735s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.735s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.735s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.736s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/local/lib/python3.10/dist-packages/cg_interfaces/cg_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_generator_py.so
+[4.736s] -- Set runtime path of "/home/inteli/modulo8-p1/install/cg_interfaces/lib/libcg_interfaces__rosidl_generator_py.so" to ""
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/MoveCmd.idl
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/GetMap.idl
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/MoveCmd.srv
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/MoveCmd_Request.msg
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/MoveCmd_Response.msg
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/GetMap.srv
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/GetMap_Request.msg
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/srv/GetMap_Response.msg
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/ament_index/resource_index/package_run_dependencies/cg_interfaces
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/ament_index/resource_index/parent_prefix_path/cg_interfaces
+[4.736s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/ament_prefix_path.sh
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/ament_prefix_path.dsv
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/path.sh
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/environment/path.dsv
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/local_setup.bash
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/local_setup.sh
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/local_setup.zsh
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/local_setup.dsv
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/package.dsv
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/ament_index/resource_index/packages/cg_interfaces
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_generator_cExport.cmake
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.737s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_cExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_generator_cppExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_cppExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_generator_pyExport.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/export_cg_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.738s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfacesConfig.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/cmake/cg_interfacesConfig-version.cmake
+[4.739s] -- Installing: /home/inteli/modulo8-p1/install/cg_interfaces/share/cg_interfaces/package.xml
+[4.742s] Invoked command in '/home/inteli/modulo8-p1/build/cg_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/inteli/modulo8-p1/install/cg:/opt/ros/humble /usr/bin/cmake --install /home/inteli/modulo8-p1/build/cg_interfaces

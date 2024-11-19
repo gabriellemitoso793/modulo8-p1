@@ -1,0 +1,7 @@
+{
+  "package_name": "cg_interfaces",
+  "non_idl_tuples": [
+    "/home/inteli/modulo8-p1/cg/cg_interfaces:srv/MoveCmd.srv",
+    "/home/inteli/modulo8-p1/cg/cg_interfaces:srv/GetMap.srv"
+  ]
+}

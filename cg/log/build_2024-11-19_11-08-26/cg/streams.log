@@ -1,0 +1,27 @@
+[0.612s] Invoking command in '/home/inteli/modulo8-p1/cg/src': AMENT_PREFIX_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces LD_LIBRARY_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/inteli/modulo8-p1/cg/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages:/home/inteli/modulo8-p1/cg/install/cg_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cg build --build-base /home/inteli/modulo8-p1/cg/build/cg/build install --record /home/inteli/modulo8-p1/cg/build/cg/install.log --single-version-externally-managed install_data
+[0.816s] running egg_info
+[0.816s] writing ../build/cg/cg.egg-info/PKG-INFO
+[0.817s] writing dependency_links to ../build/cg/cg.egg-info/dependency_links.txt
+[0.829s] writing entry points to ../build/cg/cg.egg-info/entry_points.txt
+[0.830s] writing requirements to ../build/cg/cg.egg-info/requires.txt
+[0.834s] writing top-level names to ../build/cg/cg.egg-info/top_level.txt
+[0.836s] reading manifest file '../build/cg/cg.egg-info/SOURCES.txt'
+[0.836s] adding license file 'LICENSE'
+[0.837s] writing manifest file '../build/cg/cg.egg-info/SOURCES.txt'
+[0.837s] running build
+[0.837s] running build_py
+[0.838s] copying cg/main_cli.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[0.839s] running install
+[0.840s] running install_lib
+[0.842s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/main_cli.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[0.842s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/main_cli.py to main_cli.cpython-310.pyc
+[0.852s] running install_data
+[0.852s] running install_egg_info
+[0.857s] removing '/home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.857s] Copying ../build/cg/cg.egg-info to /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg-0.0.0-py3.10.egg-info
+[0.858s] running install_scripts
+[0.880s] Installing edit script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[0.880s] Installing maze script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[0.892s] Installing test script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[0.893s] writing list of installed files to '/home/inteli/modulo8-p1/cg/build/cg/install.log'
+[0.918s] Invoked command in '/home/inteli/modulo8-p1/cg/src' returned '0': AMENT_PREFIX_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces LD_LIBRARY_PATH=/home/inteli/modulo8-p1/cg/install/cg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/inteli/modulo8-p1/cg/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages:/home/inteli/modulo8-p1/cg/install/cg_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cg build --build-base /home/inteli/modulo8-p1/cg/build/cg/build install --record /home/inteli/modulo8-p1/cg/build/cg/install.log --single-version-externally-managed install_data

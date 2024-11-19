@@ -1,0 +1,81 @@
+[1.738s] Invoking command in '/home/inteli/modulo8-p1/cg/cg': PYTHONPATH=/home/inteli/modulo8-p1/cg/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cg build --build-base /home/inteli/modulo8-p1/cg/build/cg/build install --record /home/inteli/modulo8-p1/cg/build/cg/install.log --single-version-externally-managed install_data
+[2.082s] running egg_info
+[2.082s] creating ../build/cg/cg.egg-info
+[2.083s] writing ../build/cg/cg.egg-info/PKG-INFO
+[2.083s] writing dependency_links to ../build/cg/cg.egg-info/dependency_links.txt
+[2.083s] writing entry points to ../build/cg/cg.egg-info/entry_points.txt
+[2.083s] writing requirements to ../build/cg/cg.egg-info/requires.txt
+[2.083s] writing top-level names to ../build/cg/cg.egg-info/top_level.txt
+[2.084s] writing manifest file '../build/cg/cg.egg-info/SOURCES.txt'
+[2.087s] reading manifest file '../build/cg/cg.egg-info/SOURCES.txt'
+[2.087s] adding license file 'LICENSE'
+[2.088s] writing manifest file '../build/cg/cg.egg-info/SOURCES.txt'
+[2.089s] running build
+[2.089s] running build_py
+[2.089s] creating /home/inteli/modulo8-p1/cg/build/cg/build
+[2.089s] creating /home/inteli/modulo8-p1/cg/build/cg/build/lib
+[2.090s] creating /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/navegacao_reativa.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/Maze.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/Robot.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/Game.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/main.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/__init__.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.090s] copying cg/Editor.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.091s] copying cg/teste.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.091s] copying cg/navegacao_mapa.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.091s] copying cg/main_cli.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg
+[2.091s] creating /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.091s] copying cg/Utils/Screen.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.091s] copying cg/Utils/Grid.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.091s] copying cg/Utils/__init__.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.091s] copying cg/Utils/Finders.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.092s] copying cg/Utils/Csv.py -> /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils
+[2.092s] running install
+[2.092s] running install_lib
+[2.094s] creating /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/navegacao_reativa.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Maze.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Robot.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Game.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.094s] creating /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils/Screen.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.094s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils/Grid.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils/__init__.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils/Finders.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Utils/Csv.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/main.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/__init__.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.095s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/Editor.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.096s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/teste.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.096s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/navegacao_mapa.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.096s] copying /home/inteli/modulo8-p1/cg/build/cg/build/lib/cg/main_cli.py -> /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg
+[2.096s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/navegacao_reativa.py to navegacao_reativa.cpython-310.pyc
+[2.098s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Maze.py to Maze.cpython-310.pyc
+[2.099s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Robot.py to Robot.cpython-310.pyc
+[2.099s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Game.py to Game.cpython-310.pyc
+[2.100s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils/Screen.py to Screen.cpython-310.pyc
+[2.101s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils/Grid.py to Grid.cpython-310.pyc
+[2.101s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils/__init__.py to __init__.cpython-310.pyc
+[2.101s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils/Finders.py to Finders.cpython-310.pyc
+[2.102s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Utils/Csv.py to Csv.cpython-310.pyc
+[2.102s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/main.py to main.cpython-310.pyc
+[2.102s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/__init__.py to __init__.cpython-310.pyc
+[2.102s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/Editor.py to Editor.cpython-310.pyc
+[2.103s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/teste.py to teste.cpython-310.pyc
+[2.103s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/navegacao_mapa.py to navegacao_mapa.cpython-310.pyc
+[2.104s] byte-compiling /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg/main_cli.py to main_cli.cpython-310.pyc
+[2.105s] running install_data
+[2.105s] creating /home/inteli/modulo8-p1/cg/install/cg/share/ament_index
+[2.106s] creating /home/inteli/modulo8-p1/cg/install/cg/share/ament_index/resource_index
+[2.106s] creating /home/inteli/modulo8-p1/cg/install/cg/share/ament_index/resource_index/packages
+[2.106s] copying resource/cg -> /home/inteli/modulo8-p1/cg/install/cg/share/ament_index/resource_index/packages
+[2.106s] copying package.xml -> /home/inteli/modulo8-p1/cg/install/cg/share/cg
+[2.106s] running install_egg_info
+[2.110s] Copying ../build/cg/cg.egg-info to /home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages/cg-0.0.0-py3.10.egg-info
+[2.111s] running install_scripts
+[2.140s] Installing edit script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[2.140s] Installing maze script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[2.140s] Installing test script to /home/inteli/modulo8-p1/cg/install/cg/lib/cg
+[2.141s] writing list of installed files to '/home/inteli/modulo8-p1/cg/build/cg/install.log'
+[2.184s] Invoked command in '/home/inteli/modulo8-p1/cg/cg' returned '0': PYTHONPATH=/home/inteli/modulo8-p1/cg/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/cg/install/cg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cg build --build-base /home/inteli/modulo8-p1/cg/build/cg/build install --record /home/inteli/modulo8-p1/cg/build/cg/install.log --single-version-externally-managed install_data
