@@ -3,6 +3,8 @@ from rclpy.node import Node
 from cg_interfaces.srv import MoveCmd
 import time
 
+# DFS e backtracking 
+
 class ReactiveNavigation(Node):
     def __init__(self):
         super().__init__('reactive_navigation')
@@ -21,13 +23,17 @@ class ReactiveNavigation(Node):
     def send_move_request(self, direction):
         # envia uma solicitação de movimento na direção
         request = MoveCmd.Request()
+
         # define como o robô vai se mexer up, down, left ou right
         request.direction = direction
+
         # programa continua rodando enquanto processa o comando
         future = self.move_client.call_async(request)
+
         # Aguarda que o serviço processe a solicitação e retorne um resultado.
         rclpy.spin_until_future_complete(self, future)
         result = future.result()
+
         #timer para percorrer mais devagar
         time.sleep(0.1)
         return result
@@ -36,8 +42,10 @@ class ReactiveNavigation(Node):
     def get_unvisited_directions(self, robot_pos, sensors):
         directions = []
         for direction, sensor in sensors.items():
+            
             # identifica se é espaço livre ou o target
             if sensor in ['f', 't']:
+                
                 # calcula a nova posição
                 new_pos = list(robot_pos)
                 if direction == 'left':
@@ -48,6 +56,7 @@ class ReactiveNavigation(Node):
                     new_pos[0] -= 1
                 elif direction == 'down':
                     new_pos[0] += 1
+                
                 # adiciona a direção se a nova posição ainda não foi visitada
                 if tuple(new_pos) not in self.visited_positions:
                     directions.append((direction, tuple(new_pos)))
@@ -56,6 +65,7 @@ class ReactiveNavigation(Node):
     # basicamente vai determinar as melhores direções para o robô ir
     def prioritize_directions_toward_target(self, robot_pos, target_pos, sensors):
         directions = []
+        
         # identifica se ta livre ou se é o alvo
         if robot_pos[0] < target_pos[0] and sensors['down'] in ['f', 't']:
             directions.append(('down', (robot_pos[0] + 1, robot_pos[1])))
@@ -129,6 +139,7 @@ class ReactiveNavigation(Node):
         
         # continua movendo o robô até chegar no target
         while robot_pos != target_pos:
+            
             # compara as coord do robô e do alvo e diz para onde o robô tem que ir
             direction = None
             if robot_pos[0] < target_pos[0]:
@@ -139,6 +150,7 @@ class ReactiveNavigation(Node):
                 direction = 'right'
             elif robot_pos[1] > target_pos[1]:
                 direction = 'left'
+            
             # continua movendo ate encontrar um obstaculo
             move_result = self.send_move_request(direction)
             if move_result.success:

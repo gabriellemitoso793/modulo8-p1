@@ -1,0 +1,25 @@
+[0.451s] Invoking command in '/home/inteli/modulo8-p1/cg/src': PYTHONPATH=/home/inteli/modulo8-p1/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/install/cg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cg build --build-base /home/inteli/modulo8-p1/build/cg/build install --record /home/inteli/modulo8-p1/build/cg/install.log --single-version-externally-managed install_data
+[0.607s] running egg_info
+[0.607s] writing ../../build/cg/cg.egg-info/PKG-INFO
+[0.607s] writing dependency_links to ../../build/cg/cg.egg-info/dependency_links.txt
+[0.620s] writing entry points to ../../build/cg/cg.egg-info/entry_points.txt
+[0.620s] writing requirements to ../../build/cg/cg.egg-info/requires.txt
+[0.621s] writing top-level names to ../../build/cg/cg.egg-info/top_level.txt
+[0.623s] reading manifest file '../../build/cg/cg.egg-info/SOURCES.txt'
+[0.623s] adding license file 'LICENSE'
+[0.624s] writing manifest file '../../build/cg/cg.egg-info/SOURCES.txt'
+[0.624s] running build
+[0.624s] running build_py
+[0.625s] running install
+[0.625s] running install_lib
+[0.626s] running install_data
+[0.627s] running install_egg_info
+[0.628s] removing '/home/inteli/modulo8-p1/install/cg/lib/python3.10/site-packages/cg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.628s] Copying ../../build/cg/cg.egg-info to /home/inteli/modulo8-p1/install/cg/lib/python3.10/site-packages/cg-0.0.0-py3.10.egg-info
+[0.628s] running install_scripts
+[0.643s] Installing cli script to /home/inteli/modulo8-p1/install/cg/lib/cg
+[0.643s] Installing edit script to /home/inteli/modulo8-p1/install/cg/lib/cg
+[0.655s] Installing maze script to /home/inteli/modulo8-p1/install/cg/lib/cg
+[0.655s] Installing test script to /home/inteli/modulo8-p1/install/cg/lib/cg
+[0.657s] writing list of installed files to '/home/inteli/modulo8-p1/build/cg/install.log'
+[0.676s] Invoked command in '/home/inteli/modulo8-p1/cg/src' returned '0': PYTHONPATH=/home/inteli/modulo8-p1/build/cg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/inteli/modulo8-p1/install/cg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cg build --build-base /home/inteli/modulo8-p1/build/cg/build install --record /home/inteli/modulo8-p1/build/cg/install.log --single-version-externally-managed install_data

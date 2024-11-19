@@ -1,89 +1,193 @@
 import rclpy
 from rclpy.node import Node
-from cg_interfaces.srv import GetMap, MoveCmd
-import heapq
+from cg_interfaces.srv import MoveCmd, GetMap
+import numpy as np
+import time
+
+# valida o mapa
+def validar_mapa(mapa):
+    if not all(isinstance(row, list) for row in mapa):
+        raise ValueError("O mapa deve ser uma lista de listas.")
+    if not all(len(row) == len(mapa[0]) for row in mapa):
+        raise ValueError("Todas as linhas do mapa devem ter o mesmo comprimento.")
+    return True
 
 
-class NavegacaoMapa(Node):
-    def _init_(self):
-        super()._init_('navegacao_mapa')
-        self.get_logger().info("Nó de Navegação com Mapa iniciado")
-        self.cliente_map = self.create_client(GetMap, '/get_map')
-        self.cliente_move = self.create_client(MoveCmd, '/move_command')
+class NavegacaoPorMapa(Node):
+    def __init__(self):
+        super().__init__('navegacao_por_mapa')
 
-        while not self.cliente_map.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Aguardando pelo serviço /get_map...')
-        while not self.cliente_move.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Aguardando pelo serviço /move_command...')
+        # Cliente para o serviço de movimentação
+        self.cliente_movimento = self.create_client(MoveCmd, '/move_command')
+        while not self.cliente_movimento.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Aguardando pelo serviço de movimentação...')
+        
+        # Cliente para o serviço de mapa
+        self.cliente_mapa = self.create_client(GetMap, '/get_map')
+        while not self.cliente_mapa.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Aguardando pelo serviço de mapa...')
+        
+        self.posicao_alvo = [18, 18]  # Posição padrão do alvo (será ajustada com o mapa real)
+        self.dados_mapa = None  # Armazena o mapa processado
+        self.caminho = []  # Caminho planejado do robô
 
-    def reconstruir_mapa(self, occupancy_grid_flattened, shape):
-        rows, cols = shape
-        return [occupancy_grid_flattened[i * cols:(i + 1) * cols] for i in range(rows)]
+    def obter_mapa(self):
+        """Obtém o mapa e identifica as posições de início e objetivo."""
+        requisicao = GetMap.Request()
+        futuro = self.cliente_mapa.call_async(requisicao)
+        rclpy.spin_until_future_complete(self, futuro)
+        resposta = futuro.result()
+        if resposta:
+            self.get_logger().info("Mapa recebido com sucesso.")
+            try:
+                # Converte o mapa para uma matriz bidimensional
+                formato = tuple(resposta.occupancy_grid_shape)
+                mapa_linearizado = resposta.occupancy_grid_flattened
+                
+                # Converte o mapa em uma matriz de strings
+                self.dados_mapa = np.array(mapa_linearizado, dtype=str).reshape(formato)
+                
+                # Identifica as posições do robô (r) e do objetivo (t)
+                inicio = np.argwhere(self.dados_mapa == 'r')
+                objetivo = np.argwhere(self.dados_mapa == 't')
+                
+                if len(inicio) > 0 and len(objetivo) > 0:
+                    self.posicao_inicial = tuple(inicio[0])  # Posição inicial do robô
+                    self.posicao_alvo = tuple(objetivo[0])   # Posição do objetivo
+                    self.get_logger().info(f"Posição inicial: {self.posicao_inicial}, Alvo: {self.posicao_alvo}")
+                else:
+                    self.get_logger().error("Não foi possível encontrar as posições de início ou objetivo.")
+                    self.posicao_inicial = None
+                    self.posicao_alvo = None
+                
+                # Converte o mapa para valores numéricos (0: livre, 1: obstáculo)
+                self.dados_mapa = np.where(self.dados_mapa == 'f', 0, 1)
+                self.dados_mapa[self.posicao_inicial] = 0  # Garante que o início seja acessível
+                self.dados_mapa[self.posicao_alvo] = 0     # Garante que o alvo seja acessível
 
-    def encontrar_rota(self, mapa, inicio, alvo):
-        filas = [(0, inicio)]
-        custos = {inicio: 0}
-        caminhos = {inicio: None}
+            except Exception as e:
+                self.get_logger().error(f"Erro ao processar o mapa: {e}")
+                self.dados_mapa = None
 
-        while filas:
-            _, atual = heapq.heappop(filas)
+            return self.dados_mapa
+        else:
+            self.get_logger().error('Falha ao obter o mapa.')
+            return None
 
-            if atual == alvo:
+    def a_star(self, inicio, objetivo):
+        """Implementação do algoritmo A*."""
+        def distancia_manhattan(a, b):
+            return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+        # Conjuntos abertos e fechados
+        conjunto_aberto = {inicio}
+        origem = {}
+        g_score = {inicio: 0}
+        f_score = {inicio: distancia_manhattan(inicio, objetivo)}
+
+        while conjunto_aberto:
+            # Seleciona o nó com menor custo estimado
+            atual = min(conjunto_aberto, key=lambda x: f_score.get(x, float('inf')))
+            if atual == objetivo:
+                # Reconstrói o caminho
+                caminho = []
+                while atual in origem:
+                    caminho.append(atual)
+                    atual = origem[atual]
+                caminho.append(inicio)
+                caminho.reverse()
+                return caminho
+
+            conjunto_aberto.remove(atual)
+            for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                vizinho = (atual[0] + dx, atual[1] + dy)
+                if (0 <= vizinho[0] < self.dados_mapa.shape[0] and
+                    0 <= vizinho[1] < self.dados_mapa.shape[1] and
+                    self.dados_mapa[vizinho] == 0):  # Célula livre
+                    custo_tentativo = g_score[atual] + 1
+                    if custo_tentativo < g_score.get(vizinho, float('inf')):
+                        origem[vizinho] = atual
+                        g_score[vizinho] = custo_tentativo
+                        f_score[vizinho] = custo_tentativo + distancia_manhattan(vizinho, objetivo)
+                        conjunto_aberto.add(vizinho)
+
+        return []  # Nenhum caminho encontrado
+
+    def planejar_rota(self):
+        """Planeja a rota para o robô usando A*."""
+        self.get_logger().info("Planejando a rota...")
+        if self.dados_mapa is not None and self.posicao_inicial and self.posicao_alvo:
+            self.caminho = self.a_star(self.posicao_inicial, self.posicao_alvo)
+            if self.caminho:
+                self.get_logger().info(f"Rota planejada: {self.caminho}")
+            else:
+                self.get_logger().error("Não foi possível planejar uma rota.")
+        else:
+            self.get_logger().error("Dados insuficientes para planejar a rota.")
+
+    def navegar_rota(self):
+        """Navega pelo caminho planejado."""
+        posicao_atual = self.posicao_inicial
+        for posicao_destino in self.caminho[1:]:
+            if posicao_atual == self.posicao_alvo:
+                self.get_logger().info("O robô alcançou o alvo!")
                 break
 
-            for d, (dr, dc) in zip(
-                ['up', 'down', 'left', 'right'], [(-1, 0), (1, 0), (0, -1), (0, 1)]
-            ):
-                vizinho = (atual[0] + dr, atual[1] + dc)
-                if 0 <= vizinho[0] < len(mapa) and 0 <= vizinho[1] < len(mapa[0]):
-                    if mapa[vizinho[0]][vizinho[1]] != 'b':
-                        novo_custo = custos[atual] + 1
-                        if vizinho not in custos or novo_custo < custos[vizinho]:
-                            custos[vizinho] = novo_custo
-                            heapq.heappush(filas, (novo_custo, vizinho))
-                            caminhos[vizinho] = (atual, d)
+            direcao = self.determinar_direcao(posicao_atual, posicao_destino)
+            if not direcao:
+                self.get_logger().error(f"Direção inválida para {posicao_destino}.")
+                break
 
-        caminho = []
-        atual = alvo
-        while atual != inicio:
-            atual, direcao = caminhos[atual]
-            caminho.append(direcao)
-        return caminho[::-1]
+            resposta = self.mover_robo(direcao)
+            if resposta and not resposta.success:
+                self.get_logger().error("Falha ao mover o robô.")
+                break
 
-    def navegar(self):
-        # Solicita o mapa
-        req_map = GetMap.Request()
-        future_map = self.cliente_map.call_async(req_map)
-        rclpy.spin_until_future_complete(self, future_map)
+            posicao_atual = posicao_destino
+            self.get_logger().info(f"Nova posição: {posicao_atual}")
+            time.sleep(0.5)  # Delay para simular o movimento
 
-        if future_map.result():
-            mapa = self.reconstruir_mapa(
-                future_map.result().occupancy_grid_flattened,
-                future_map.result().occupancy_grid_shape,
-            )
-            pos_inicial = (future_map.result().robot_pos[0], future_map.result().robot_pos[1])
-            pos_alvo = (future_map.result().target_pos[0], future_map.result().target_pos[1])
+    def determinar_direcao(self, posicao_atual, posicao_destino):
+        """Determina a direção para o próximo passo."""
+        dx = posicao_destino[0] - posicao_atual[0]
+        dy = posicao_destino[1] - posicao_atual[1]
 
-            rota = self.encontrar_rota(mapa, pos_inicial, pos_alvo)
-
-            # Navega até o destino
-            for direcao in rota:
-                req_move = MoveCmd.Request()
-                req_move.direction = direcao
-                future_move = self.cliente_move.call_async(req_move)
-                rclpy.spin_until_future_complete(self, future_move)
-
-                if not future_move.result().success:
-                    self.get_logger().warning(f"Movimento {direcao} falhou.")
-                    break
-                self.get_logger().info(f"Movendo para {direcao}")
+        if dx == 0 and dy == 1:
+            return 'right'
+        elif dx == 0 and dy == -1:
+            return 'left'
+        elif dx == 1 and dy == 0:
+            return 'down'
+        elif dx == -1 and dy == 0:
+            return 'up'
         else:
-            self.get_logger().error("Falha ao obter o mapa.")
+            self.get_logger().error(f"Erro ao calcular direção: dx={dx}, dy={dy}")
+            return None
+
+    def mover_robo(self, direcao):
+        """Move o robô em uma direção específica."""
+        requisicao = MoveCmd.Request()
+        requisicao.direction = direcao
+        futuro = self.cliente_movimento.call_async(requisicao)
+        rclpy.spin_until_future_complete(self, futuro)
+        resposta = futuro.result()
+        if resposta:
+            self.get_logger().info(f"Movimento: {direcao} | Sucesso: {resposta.success}")
+            return resposta
+        else:
+            self.get_logger().error("Erro ao mover o robô.")
+            return None
 
 
 def main(args=None):
     rclpy.init(args=args)
-    nodo_navegacao_mapa = NavegacaoMapa()
-    nodo_navegacao_mapa.navegar()
-    nodo_navegacao_mapa.destroy_node()
+    cliente = NavegacaoPorMapa()
+    cliente.obter_mapa()
+    cliente.planejar_rota()
+    cliente.navegar_rota()
+    cliente.destroy_node()
     rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
